@@ -6,7 +6,7 @@ import PrevisaoItem from './componentes/PrevisaoItem';
 export default function App() {
 
   const endPoint = "https://api.openweathermap.org/data/2.5/forecast?lang=pt&units=metric&q=";
-  const apiKey = "b54e699bd9eb3326fd49815e887fd16e";
+  const apiKey = "";
 
   const obterPrevisoes = () => {
     setPrevisoes([]);
