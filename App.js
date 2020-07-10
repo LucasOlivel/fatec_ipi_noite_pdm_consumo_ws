@@ -6,7 +6,7 @@ import PrevisaoItem from './componentes/PrevisaoItem';
 export default function App() {
 
   const endPoint = "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily";
-  const apiKey = "b54e699bd9eb3326fd49815e887fd16e";
+  const apiKey = "";
 
   const obterPrevisoes = () => {
     setPrevisoes([]);
