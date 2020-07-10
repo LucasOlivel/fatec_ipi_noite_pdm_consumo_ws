@@ -5,15 +5,15 @@ import PrevisaoItem from './componentes/PrevisaoItem';
 
 export default function App() {
 
-  const endPoint = "https://api.openweathermap.org/data/2.5/forecast?lang=pt&units=metric&q=";
-  const apiKey = "";
+  const endPoint = "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily";
+  const apiKey = "b54e699bd9eb3326fd49815e887fd16e";
 
   const obterPrevisoes = () => {
     setPrevisoes([]);
-    const target = endPoint + cidade + '&appid=' + apiKey;
+    const target = endPoint + '&appid=' + apiKey;
     fetch(target)
       .then((dados => dados.json()))
-      .then(dados => setPrevisoes(dados["list"]));
+      .then(dados => setPrevisoes(dados[0]));
   }
 
   const[cidade, setCidade] = useState('');
@@ -21,7 +21,7 @@ export default function App() {
   const capturarCidade = (cidade) => {
     setCidade(cidade)
   }
-
+    
   return (
     <View style={styles.container}>
       <View style={styles.entrada}>
